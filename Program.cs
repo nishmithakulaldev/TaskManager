@@ -7,16 +7,7 @@ using TaskManager.Repositories;
 using TaskManager.Services;
 
 public class Program
-{
-    private static string? GetFlag(string[] args, string flagName)
-    {
-        var index = Array.IndexOf(args, flagName);
-        if (index != -1 && index + 1 < args.Length)
-            return args[index + 1];
-        return null;
-    }
-
-    
+{    
     static void Main(string[] args)
     {
         ITaskRepository repository = new JsonTaskRepository();
